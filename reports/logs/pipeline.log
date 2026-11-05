@@ -1,0 +1,33 @@
+2026-10-30 20:53:18,155 - INFO - Sales pipeline started.
+2026-10-30 20:53:18,182 - ERROR - Pipeline failed.
+Traceback (most recent call last):
+  File "D:\AI\AI POWERED SALES ANALYTICS COPILOT\src\pipeline.py", line 25, in run_pipeline
+    df = pd.read_csv(RAW_PATH)
+  File "D:\AI\AI POWERED SALES ANALYTICS COPILOT\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1866, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "D:\AI\AI POWERED SALES ANALYTICS COPILOT\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 429, in _read
+    return parser.read(nrows)
+           ~~~~~~~~~~~^^^^^^^
+  File "D:\AI\AI POWERED SALES ANALYTICS COPILOT\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 3061, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        nrows
+        ^^^^^
+    )
+    ^
+  File "D:\AI\AI POWERED SALES ANALYTICS COPILOT\.venv\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 297, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 1041, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 1196, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 1262, in pandas._libs.parsers.TextReader._convert_column_data
+  File "pandas/_libs/parsers.pyx", line 1348, in pandas._libs.parsers.TextReader._convert_columns
+  File "pandas/_libs/parsers.pyx", line 1600, in pandas._libs.parsers.TextReader._convert_tokens
+  File "pandas/_libs/parsers.pyx", line 1907, in pandas._libs.parsers.TextReader._string_convert
+  File "pandas/_libs/parsers.pyx", line 1923, in pandas._libs.parsers.TextReader._string_convert_single
+  File "pandas/_libs/parsers.pyx", line 2452, in pandas._libs.parsers._string_box_utf8
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf6 in position 9: invalid start byte
+2026-10-30 20:54:49,163 - INFO - Sales pipeline started.
+2026-10-30 20:54:49,205 - INFO - Raw dataset loaded: (9994, 21)
+2026-10-30 20:54:49,284 - INFO - Cleaning completed: (9994, 21)
+2026-10-30 20:54:49,407 - INFO - Processed dataset saved successfully.
+2026-10-30 20:54:49,408 - INFO - Sales pipeline completed.
